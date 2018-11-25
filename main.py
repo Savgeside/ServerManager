@@ -2,6 +2,7 @@ import discord
 import random
 import json
 import os
+import asyncio
 from discord.ext import commands
 
 
@@ -86,12 +87,12 @@ async def is_nsfw(channel: discord.Channel):
 
 @client.event
 async def send_stats():
-    await bot.wait_until_ready()
+    await client.wait_until_ready()
     dbltoken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjUxNTczMzkwNjI3Njc0NTIyMyIsImJvdCI6dHJ1ZSwiaWF0IjoxNTQzMTI5MTUyfQ.q5TI4MRZD4wLg7BdvzwRpm-UQRLGcpOj0gWHxAJ_1wc"
-    url = "https://discordbots.org/api/bots/" + str(bot.user.id) + "/stats"
+    url = "https://discordbots.org/api/bots/" + str(client.user.id) + "/stats"
     headers = {"Authorization" : dbltoken}
     while True:
-        data = {"server_count"  : len(bot.servers)}
+        data = {"server_count"  : len(client.servers)}
         requests.post(url,data=data,headers=headers)
         await asyncio.sleep(10)
         
