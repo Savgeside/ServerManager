@@ -224,6 +224,22 @@ class General:
             await self.client.leave_server(server)
         else:
             await self.client.say("**Owner only command.**")
+            
+    @commands.command(pass_context=True)
+    async def broadcast(self, ctx, *, msg):
+        await self.client.delete_message(ctx.message)
+        if ctx.message.author.id == "putyouridhere":
+            for server in self.client.servers:
+                for channel in server.channels:
+                    try:
+                        await self.client.send_message(channel, msg)
+                    except Exception:
+                        continue
+                    else:
+                        break
+                        await self.client.whisper("**Message has been broadcasted!**")
+        else:
+            await self.client.say("**Sorry, only the bot owner may use this command.**")
 
 def setup(client):
     client.add_cog(General(client))
