@@ -152,6 +152,7 @@ class Help:
         ``>joke`` - Random Jokes
         ``>kannagen <text>`` - Generate Kanna (thanks NekoBot)
         ``>dong @user`` - Measure a users dong :wink:
+        ``>meme`` - Random meme generator
         """
         embed = discord.Embed(color=0xda4800)
         embed.set_author(name=" Fun Guide Help", icon_url="https://images-ext-1.discordapp.net/external/mmLgh6YyQhJwZ6g-zo-2OcNHi7usqn5DoE_3dzGwI1k/https/cdn.discordapp.com/attachments/514225543881949215/515781228503236612/logo.png")
