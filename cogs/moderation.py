@@ -175,7 +175,7 @@ class Moderation:
         await self.client.edit_channel_permissions(channel, server.default_role, overwrite)
         msg = await self.client.say(f"|<:check:514855967532384256>| **Locked down** the channel: {channel.mention}")
         await asyncio.sleep(5)
-        await client.delete_message(msg)
+        await self.client.delete_message(msg)
 
     @commands.command(pass_context=True)
     async def unlock(self, ctx):
@@ -190,7 +190,7 @@ class Moderation:
         await self.client.edit_channel_permissions(channel, server.default_role, overwrite)
         msg = await self.client.say(f"|<:check:514855967532384256>| **Unlocked** the channel: {channel.mention}")
         await asyncio.sleep(5)
-        await client.delete_message(msg)
+        await self.client.delete_message(msg)
 
         
 
