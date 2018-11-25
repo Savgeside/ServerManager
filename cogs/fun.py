@@ -164,7 +164,19 @@ class Fun:
         embed.description = f"Image not showing? [Click Here]({data['url']})"
         embed.set_image(url=f"{data['url']}")
         await self.client.say(embed=embed)
+                        
+    @commands.command(pass_context = True)
+    async def meme(self, ctx):
+        async with aiohttp.ClientSession() as cs:
+            async with cs.get("https://api.reddit.com/r/me_irl/random") as r:
+                author = ctx.message.author
+                data = await r.json()
+                await self.client.say("**Take some memes ;D**")
+                embed = discord.Embed(color=0xda4800)
+                embed.description = f"Image not showing? [Click Here]({data["url"]})
+                embed.set_image(url = data[0]["data"]["children"][0]["data"]["url"])
 
+                await self.client.say(embed=embed)
 
 def setup(client):
     client.add_cog(Fun(client))
