@@ -1,5 +1,6 @@
 import discord
 import json
+import asyncio
 from discord.ext import commands
 
 class Moderation:
@@ -172,7 +173,9 @@ class Moderation:
         overwrite = discord.PermissionOverwrite()
         overwrite.send_messages = False
         await self.client.edit_channel_permissions(channel, server.default_role, overwrite)
-        await self.client.say(f"|<:check:514855967532384256>| **Locked down** the channel: {channel.mention}")
+        msg = await self.client.say(f"|<:check:514855967532384256>| **Locked down** the channel: {channel.mention}")
+        await asyncio.sleep(5)
+        await client.delete_message(msg)
 
     @commands.command(pass_context=True)
     async def unlock(self, ctx):
@@ -185,7 +188,9 @@ class Moderation:
         overwrite = discord.PermissionOverwrite()
         overwrite.send_messages = True
         await self.client.edit_channel_permissions(channel, server.default_role, overwrite)
-        await self.client.say(f"|<:check:514855967532384256>| **Unlocked** the channel: {channel.mention}")
+        msg = await self.client.say(f"|<:check:514855967532384256>| **Unlocked** the channel: {channel.mention}")
+        await asyncio.sleep(5)
+        await client.delete_message(msg)
 
         
 
