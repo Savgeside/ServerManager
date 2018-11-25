@@ -4,3 +4,4 @@ nekobot
 Pillow
 requests
 qrcode
+temp
