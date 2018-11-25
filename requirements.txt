@@ -1,0 +1,4 @@
+discord.py
+config
+temp
+nekobot
