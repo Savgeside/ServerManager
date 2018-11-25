@@ -174,7 +174,6 @@ class Fun:
                 await self.client.say("**Take some memes ;D**")
                 url = [0]["data"]["url"]
                 embed = discord.Embed(color=0xda4800)
-                embed.description = f"Image not showing? [Click Here]({url})"
                 embed.set_image(url = data[0]["data"]["children"][0]["data"]["url"])
 
                 await self.client.say(embed=embed)
