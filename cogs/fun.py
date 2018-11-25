@@ -172,7 +172,6 @@ class Fun:
                 author = ctx.message.author
                 data = await r.json()
                 await self.client.say("**Take some memes ;D**")
-                url = [0]["data"]["url"]
                 embed = discord.Embed(color=0xda4800)
                 embed.set_image(url = data[0]["data"]["children"][0]["data"]["url"])
 
