@@ -3,7 +3,6 @@ import random
 import json
 from discord.ext import commands
 
-TOKEN = "NTE1NzMzOTA2Mjc2NzQ1MjIz.DtpbIg.KiA_K7ozHMZ01DcYG0CJSy8Z65M"
 
 client = commands.Bot(command_prefix=">")
 
@@ -84,4 +83,4 @@ async def is_nsfw(channel: discord.Channel):
     channeldata = [d for d in data if d['id'] == channel.id][0]
     return channeldata['nsfw']
 
-client.run(TOKEN)
+client.run(os.environ['TOKEN'])
