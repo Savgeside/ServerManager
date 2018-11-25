@@ -3,6 +3,7 @@ import random
 import json
 import os
 import asyncio
+import requests
 from discord.ext import commands
 
 
