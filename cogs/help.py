@@ -167,6 +167,7 @@ class Help:
         ``>4k`` - Random 4k Image
         ``>ass`` - Random Ass Image
         ``>gonewild`` - Gone Wild :wink:
+        ``>anal`` - Shows you an anal image or gif
 
         """
         embed = discord.Embed(color=0xda4800)
