@@ -1,0 +1,6 @@
+discord.py
+psutil
+nekobot
+Pillow
+requests
+qrcode
