@@ -1,0 +1,18 @@
+{
+    "514225543881949213": {
+        "welcome message": "{member} Hi, welcome to **{server}**! You are our **{members}th** member here! \ud83c\udf89",
+        "welcome channel": "general",
+        "leave message": "{member} Goodbye",
+        "leave channel": "general"
+    },
+    "451131875117760513": {
+        "welcome channel": "general",
+        "welcome message": "{member} Hi, welcome to the server! Make sure to check out laggys youtube channel!\nMember Count - **{members}**"
+    },
+    "513798210125299712": {
+        "welcome message": "Not Set",
+        "welcome channel": "Not Set",
+        "leave message": "Not Set",
+        "leave channel": "Not Set"
+    }
+}
