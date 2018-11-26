@@ -33,7 +33,9 @@ class Stats:
         embed.add_field(name=f"» All Users [{users}]", value=f"Online - {online} \n Offline - {offline}\n Dnd - {dnd} \n Idle - {idle}")
         embed.add_field(name="» All Servers", value=len(self.client.servers), inline=False)
         embed.add_field(name="» Total Channels", value=len(set(self.client.get_all_channels())), inline=False)
-        embed.add_field(name="» Servers", value=len(self.client.servers))
+        embed.add_field(name="Invites:", value="[Invite me here](https://discordbots.org/bot/515733906276745223)\n[Upvote me here](https://discordbots.org/bot/515733906276745223)")
+                        
+                        
         await self.client.say(embed=embed)
 
     @commands.command()
